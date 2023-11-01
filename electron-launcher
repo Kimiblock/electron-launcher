@@ -34,7 +34,7 @@ function main(){
 	--tmpfs /tmp \
 	--bind "$HOME" "$HOME" \
 	--ro-bind "${appDir}" "${appDir}" \
-	electron "${appDir}"/${appExec} --enable-features=UseOzonePlatform --ozone-platform=wayland --use-vulkan --ignore-gpu-blocklist --enable-zero-copy --enable-features=VaapiVideoDecoder --enable-features=VaapiIgnoreDriverChecks "$@"
+	electron "${appDir}"/${appExec} --enable-wayland-ime --enable-features=UseOzonePlatform --ozone-platform=wayland --use-vulkan --ignore-gpu-blocklist --enable-zero-copy --enable-features=VaapiVideoDecoder --enable-features=VaapiIgnoreDriverChecks "$@"
 }
 
 getFlags "$@"
